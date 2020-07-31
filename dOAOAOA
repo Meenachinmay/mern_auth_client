@@ -1,0 +1,47 @@
+[33mcommit 69e01ed3370c986bfa1d44f566d6d6b4f1cb0144[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: meenachinmay <chinmayanand896@gmail.com>
+Date:   Fri Jul 31 15:03:11 2020 +0530
+
+    redux state persisting now
+
+[33mcommit 5ef5e5246ed5a115b0cecdabb8fa0d35ae0a55b6[m
+Author: meenachinmay <chinmayanand896@gmail.com>
+Date:   Fri Jul 31 14:49:18 2020 +0530
+
+    user cant access login and sign up route when already logged in
+
+[33mcommit b06bb40062316962a7ffd7fb7bbbd9fcd9bd49fb[m
+Author: meenachinmay <chinmayanand896@gmail.com>
+Date:   Fri Jul 31 14:25:26 2020 +0530
+
+    user is redirecting after signup to feature page
+
+[33mcommit 81b8eca43f34dc7ed57ac1c61b4bb9f3951f7962[m
+Author: meenachinmay <chinmayanand896@gmail.com>
+Date:   Fri Jul 31 13:50:27 2020 +0530
+
+    redux code updated, data is saving in redux store
+
+[33mcommit ca43e340774ffef97d1ac533720a2f342918d3aa[m
+Author: meenachinmay <chinmayanand896@gmail.com>
+Date:   Fri Jul 31 11:47:27 2020 +0530
+
+    registration added from client, redux store added
+
+[33mcommit 8294b80d8f93081566bae3bdb8e28d2005c84eff[m
+Author: meenachinmay <chinmayanand896@gmail.com>
+Date:   Wed Jul 29 16:40:28 2020 +0530
+
+    login and signup form refractored
+
+[33mcommit c4f24fd6ef7d5b7e146d788b7c24a8aec5212375[m
+Author: meenachinmay <chinmayanand896@gmail.com>
+Date:   Wed Jul 29 15:26:51 2020 +0530
+
+    login and signup pages are done
+
+[33mcommit ec0542d6e07ba941b46f672bca7409b960e91e18[m
+Author: meenachinmay <chinmayanand896@gmail.com>
+Date:   Tue Jul 28 15:39:45 2020 +0530
+
+    Initialize project using Create React App

@@ -20,5 +20,15 @@ export const signUp = (formProps, callback) => dispatch => {
         }));
 }
 
+// LOGOUT Action
+export const signout = () => {
+    localStorage.removeItem('token');
+
+    return {
+        type: AUTH_USER,
+        payload: ''
+    }
+}
+
 // dispatch method basically takes an action.type and action.payload and then dispatch this information to the reducers where reducer can update the state based upon the action.type
 // we can call the dispatch method from anywhere like we can call if from components and from actions as well.
