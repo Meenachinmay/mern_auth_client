@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import reducers from './reducers/index';
+import { createStore, applyMiddleware, compose } from 'redux';
+import rootReducer from './reducers/index';
 import reduxThunk from 'redux-thunk';
 
 import App from './components/App';
@@ -13,11 +13,16 @@ import Welcome from './components/Welcome';
 
 import './assets/main.css';
 
+const middleware = [reduxThunk];
+
 // CREATE REDUX STORE
 const store = createStore(
-  reducers,
+  rootReducer,
   {},
-  applyMiddleware(reduxThunk)
+  compose(
+    applyMiddleware(...middleware), 
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
 );
 
 ReactDOM.render(
