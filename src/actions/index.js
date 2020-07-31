@@ -20,6 +20,23 @@ export const signUp = (formProps, callback) => dispatch => {
         }));
 }
 
+// LOGIN Action
+export const signin = (formProps, callback) => dispatch => {
+    axios.post('/signin', formProps)
+        .then(response => {
+            dispatch({
+                type: AUTH_USER,
+                payload: response.data.token
+            });
+            localStorage.setItem('token', response.data.token);
+            callback();
+        })
+        .catch(error => dispatch({
+            type: AUTH_ERROR,
+            payload: error.response.data.error
+        }));
+}
+
 // LOGOUT Action
 export const signout = () => {
     localStorage.removeItem('token');

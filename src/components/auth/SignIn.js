@@ -1,11 +1,16 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
 import alreadyLoggedIn from '../alreadyLoggedIn';
+import { signin } from '../../actions/index';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
 
 class SignIn extends React.Component {
     
     onSubmit = formProps => {
-        console.log(formProps);
+        this.props.signin(formProps, () => {
+            this.props.history.push('/feature');
+        })
     }
 
     render(){
@@ -42,4 +47,7 @@ class SignIn extends React.Component {
     }
 }
 
-export default reduxForm({ form: 'signup'})(alreadyLoggedIn(SignIn));
+export default compose(
+    connect(null, { signin }),
+    reduxForm({ form: 'signup'})
+)(alreadyLoggedIn(SignIn));
