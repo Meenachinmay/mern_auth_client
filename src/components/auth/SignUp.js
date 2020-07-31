@@ -1,10 +1,15 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/index';
 
 class SignUp extends React.Component {
     
     onSubmit = formProps => {
-        console.log(formProps);
+
+        // MAKE A CALL TO SIGN UP ACTION from action.js
+        this.props.signUp(formProps);
     }
 
     render(){
@@ -41,4 +46,10 @@ class SignUp extends React.Component {
     }
 }
 
-export default reduxForm({ form: 'signup'})(SignUp);
+
+
+// TO compose all the HOC
+export default compose(
+    connect(null ,actions),
+    reduxForm({ form: 'signup'})
+)(SignUp);
