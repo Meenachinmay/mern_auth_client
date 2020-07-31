@@ -2,13 +2,14 @@ import axios from 'axios';
 
 import { AUTH_USER, AUTH_ERROR } from './types';
 
-export const signUp = (formProps) => dispatch => {
+export const signUp = (formProps, callback) => dispatch => {
     axios.post('/signup', formProps)
         .then(response => {
             dispatch({
                 type: AUTH_USER,
                 payload: response.data.success
-            })
+            });
+            callback();
         })
         .catch(error => dispatch({
             type: AUTH_ERROR,

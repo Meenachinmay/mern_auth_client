@@ -9,8 +9,16 @@ class SignUp extends React.Component {
     onSubmit = formProps => {
 
         // MAKE A CALL TO SIGN UP ACTION from action.js
-        this.props.signUp(formProps);
+        this.props.signUp(formProps, () => {
+            this.props.history.push('/feature');
+        });
     }
+
+    // componentDidMount(){
+    //     if (this.props.auth.authenticated.success) {
+    //         this.props.history.push('/feature')
+    //     }
+    // }
 
     render(){
         const { handleSubmit } = this.props;
