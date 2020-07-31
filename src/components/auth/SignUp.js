@@ -8,11 +8,11 @@ import alreadyLoggedIn from '../alreadyLoggedIn';
 class SignUp extends React.Component {
 
     onSubmit = formProps => {
-
         // MAKE A CALL TO SIGN UP ACTION from action.js
         this.props.signUp(formProps, () => {
             this.props.history.push('/feature');
         });
+
     }
 
     render(){
@@ -27,8 +27,8 @@ class SignUp extends React.Component {
                             name="email"
                             type="text"
                             component="input"
-                            className="py-2 px-2 mb-3 border focus:outline-none rounded"
                             placeholder="Email"
+                            className="py-2 px-2 mb-3 border focus:outline-none rounded"
                             autoComplete="none"
                         />
                     </fieldset>
@@ -44,6 +44,7 @@ class SignUp extends React.Component {
                     </fieldset>
                     <div>
                     </div>
+                    
                     <button className="px-5 py-2 text-white border bg-green-500 hover:bg-green-600 rounded mt-3 focus:outline-none">Sign Up</button>
                 </form>
             </div>
@@ -52,7 +53,7 @@ class SignUp extends React.Component {
 }
 
 // MAPPING THE state from REDUX STORE as props to this component
-const mapStateToProps = (state) =>({
+const mapStateToProps = (state) => ({
     auth: state.auth
 })
 

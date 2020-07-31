@@ -9,7 +9,7 @@ export default function(state = INITIAL_STATE, action) {
     switch(action.type){
         case AUTH_USER:
             return {
-                ...state, authenticated: action.payload
+                ...state, authenticated: action.payload, errorMessage: ''
             };
         case AUTH_ERROR:
             return {
