@@ -3,6 +3,7 @@ import { reduxForm, Field } from 'redux-form';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { signUp } from '../../actions/index';
+import alreadyLoggedIn from '../alreadyLoggedIn';
 
 class SignUp extends React.Component {
 
@@ -66,4 +67,4 @@ const mapStateToProps = (state) =>({
 export default compose(
     connect(mapStateToProps ,{ signUp }),
     reduxForm({ form: 'signup'})
-)(SignUp);
+)(alreadyLoggedIn(SignUp));

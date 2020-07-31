@@ -1,7 +1,8 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
+import alreadyLoggedIn from '../alreadyLoggedIn';
 
-class SignUp extends React.Component {
+class SignIn extends React.Component {
     
     onSubmit = formProps => {
         console.log(formProps);
@@ -41,4 +42,4 @@ class SignUp extends React.Component {
     }
 }
 
-export default reduxForm({ form: 'signup'})(SignUp);
+export default reduxForm({ form: 'signup'})(alreadyLoggedIn(SignIn));
