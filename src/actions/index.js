@@ -7,8 +7,11 @@ export const signUp = (formProps, callback) => dispatch => {
         .then(response => {
             dispatch({
                 type: AUTH_USER,
-                payload: response.data.success
+                payload: response.data.token            
             });
+
+            // SAVING THE TOKEN TO LOCAL STORAGE
+            localStorage.setItem('token', response.data.token);
             callback();
         })
         .catch(error => dispatch({

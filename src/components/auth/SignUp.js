@@ -15,12 +15,6 @@ class SignUp extends React.Component {
         });
     }
 
-    // componentDidMount(){
-    //     if (this.props.auth.authenticated.success) {
-    //         this.props.history.push('/feature')
-    //     }
-    // }
-
     render(){
         const { handleSubmit } = this.props;
 
@@ -49,7 +43,6 @@ class SignUp extends React.Component {
                         />
                     </fieldset>
                     <div>
-                    { this.props.auth.errorMessage ? <div>{this.props.auth.errorMessage}</div> : "" }
                     </div>
                     <button className="px-5 py-2 text-white border bg-green-500 hover:bg-green-600 rounded mt-3 focus:outline-none">Sign Up</button>
                 </form>

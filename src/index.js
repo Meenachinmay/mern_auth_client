@@ -16,10 +16,14 @@ import './assets/main.css';
 
 const middleware = [reduxThunk];
 
+const InitialState = {
+  auth: { authenticated: localStorage.getItem('token') }
+};
+
 // CREATE REDUX STORE
 const store = createStore(
   rootReducer,
-  {},
+  InitialState,
   compose(
     applyMiddleware(...middleware), 
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
