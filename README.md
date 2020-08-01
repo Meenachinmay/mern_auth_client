@@ -6,16 +6,16 @@
 4. so clone both the repo 
 5. go the backend project add your mongodb database connection and install node modules and then try to run backend.
 
-#for frontend
+## for frontend
 
 ```cd mern_auth_client```
 ```sudo npm install```
 
-#for backend
+## for backend
 
 ```cd mern_authentication```
 ```sudo npm install```
 
 connect the mongodb database connection
 
-###RUN THE APPLICATION
+## RUN THE APPLICATION
